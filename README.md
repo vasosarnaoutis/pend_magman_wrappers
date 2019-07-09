@@ -51,6 +51,20 @@ For pendulum
 > self.reset_to_0 = False
 
 
+# Stable-baselines
+
+The wrappers were initially designed to be used within stable-baselines for benchmarking the control tasks to DDPG. To recreate those results or develop on them you would need to install the library of stable-baselines found in https://stable-baselines.readthedocs.io/en/master/ 
+
+After installing the library you can go into stable-baselines/stable_baslines/ddpg and replace the policies.py file with the one found in this repository. This will allow you to use the ddpg algorithm of stable-baselines for shallow neural networks by commenting and uncommenting the following lines of code.
+
+        if layers is None:
+            layers = [20 ,20] # 2 Layer for pendulum    
+            layers = [128]  # 1 Layer for pendulum       
+            layers = [64, 64]  # 2 Layer for magman
+            layers = [512]  # 1 Layer for magman
+
+You can train both environments using the stable-baselines ddpg algorithms and the wrappers by using the sample code found in this repository under the name ddpg_train.py
+
 
 
 
