@@ -5,11 +5,13 @@ Download or clone the wrappers to a folder and install them (probably it would b
 
 Run 
 > pip install -e . 
+
 in the gym-tim folder from the terminal.
 
 call it by using 
 
 > import gym_tim
+
 > gym.make('tim_magman-v0')
 
 
